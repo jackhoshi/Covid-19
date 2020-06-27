@@ -1,0 +1,189 @@
+country,total_confirmed_cases,parents,Alpha-3 code
+US,2465873,Confirmed,NA
+Brazil,903925,Confirmed,BRA
+Russia,650111,Confirmed,RUS
+Italy,429597,Confirmed,ITA
+Spain,418169,Confirmed,ESP
+Germany,361016,Confirmed,DEU
+India,341526,Confirmed,IND
+United Kingdom,324285,Confirmed,GBR
+Turkey,303818,Confirmed,TUR
+Iran,299826,Confirmed,NA
+France,288731,Confirmed,FRA
+Peru,264457,Confirmed,PER
+Mexico,192983,Confirmed,MEX
+China,168224,Confirmed,CHN
+Saudi Arabia,162733,Confirmed,SAU
+Canada,155170,Confirmed,CAN
+Chile,140953,Confirmed,CHL
+Pakistan,117162,Confirmed,PAK
+Qatar,103254,Confirmed,QAT
+Belgium,84363,Confirmed,BEL
+Bangladesh,70505,Confirmed,BGD
+Belarus,67396,Confirmed,BLR
+Ecuador,64471,Confirmed,ECU
+South Africa,62951,Confirmed,ZAF
+Switzerland,61434,Confirmed,CHE
+Singapore,60850,Confirmed,SGP
+United Arab Emirates,56863,Confirmed,ARE
+Portugal,55370,Confirmed,PRT
+Netherlands,53337,Confirmed,NLD
+Ireland,49504,Confirmed,IRL
+Kuwait,47380,Confirmed,KWT
+Colombia,46884,Confirmed,COL
+Sweden,46445,Confirmed,SWE
+Indonesia,39431,Confirmed,IDN
+Egypt,38649,Confirmed,EGY
+Poland,38392,Confirmed,POL
+Ukraine,38204,Confirmed,UKR
+Romania,35131,Confirmed,ROU
+Austria,33192,Confirmed,AUT
+Israel,32799,Confirmed,ISR
+Japan,32607,Confirmed,JPN
+Dominican Republic,30313,Confirmed,DOM
+Argentina,26798,Confirmed,ARG
+Philippines,25614,Confirmed,PHL
+Panama,25026,Confirmed,PAN
+Denmark,23413,Confirmed,DNK
+"Korea, South",22447,Confirmed,NA
+Bahrain,21045,Confirmed,BHR
+Afghanistan,19939,Confirmed,AFG
+Serbia,18727,Confirmed,SRB
+Kazakhstan,18725,Confirmed,KAZ
+Oman,17834,Confirmed,OMN
+Norway,16880,Confirmed,NOR
+Algeria,16809,Confirmed,DZA
+Czechia,16629,Confirmed,NA
+Morocco,15406,Confirmed,MAR
+Nigeria,15374,Confirmed,NGA
+Malaysia,14921,Confirmed,MYS
+Armenia,14865,Confirmed,ARM
+Moldova,14342,Confirmed,NA
+Bolivia,14318,Confirmed,BOL
+Australia,14032,Confirmed,AUS
+Iraq,13449,Confirmed,IRQ
+Finland,13033,Confirmed,FIN
+Ghana,12112,Confirmed,GHA
+Cameroon,10697,Confirmed,CMR
+Azerbaijan,10337,Confirmed,AZE
+Luxembourg,8011,Confirmed,LUX
+Sudan,7872,Confirmed,SDN
+Guatemala,7291,Confirmed,GTM
+Uzbekistan,7042,Confirmed,UZB
+Honduras,6771,Confirmed,HND
+Tajikistan,6738,Confirmed,TJK
+Hungary,6698,Confirmed,HUN
+Guinea,6526,Confirmed,GIN
+Senegal,6228,Confirmed,SEN
+Thailand,6127,Confirmed,THA
+Djibouti,5765,Confirmed,DJI
+Cote d'Ivoire,4881,Confirmed,NA
+Bosnia and Herzegovina,4704,Confirmed,BIH
+Greece,4506,Confirmed,GRC
+Croatia,4455,Confirmed,HRV
+North Macedonia,4379,Confirmed,NA
+Congo (Kinshasa),4217,Confirmed,NA
+Bulgaria,4054,Confirmed,BGR
+El Salvador,4047,Confirmed,SLV
+Cuba,4041,Confirmed,CUB
+Gabon,3794,Confirmed,GAB
+Estonia,3622,Confirmed,EST
+Iceland,3610,Confirmed,ISL
+Kyrgyzstan,3211,Confirmed,KGZ
+Lithuania,3031,Confirmed,LTU
+Kenya,3010,Confirmed,KEN
+New Zealand,3007,Confirmed,NZL
+Slovenia,2945,Confirmed,SVN
+Nepal,2934,Confirmed,NPL
+Slovakia,2930,Confirmed,SVK
+Haiti,2714,Confirmed,HTI
+Somalia,2701,Confirmed,SOM
+Sri Lanka,2647,Confirmed,LKA
+Maldives,2527,Confirmed,MDV
+Venezuela,2441,Confirmed,VEN
+Mali,2352,Confirmed,MLI
+Albania,2128,Confirmed,ALB
+Tunisia,2104,Confirmed,TUN
+Lebanon,2065,Confirmed,LBN
+Kosovo,2043,Confirmed,NA
+Zambia,2008,Confirmed,ZMB
+Ethiopia,1904,Confirmed,ETH
+Costa Rica,1891,Confirmed,CRI
+Niger,1888,Confirmed,NER
+Latvia,1867,Confirmed,LVA
+Cyprus,1765,Confirmed,CYP
+Burkina Faso,1698,Confirmed,BFA
+Andorra,1641,Confirmed,AND
+Paraguay,1608,Confirmed,PRY
+Uruguay,1564,Confirmed,URY
+Nicaragua,1534,Confirmed,NIC
+Chad,1527,Confirmed,TCD
+Equatorial Guinea,1518,Confirmed,GNQ
+Georgia,1458,Confirmed,GEO
+Sierra Leone,1452,Confirmed,SLE
+Guinea-Bissau,1400,Confirmed,GNB
+Diamond Princess,1376,Confirmed,NA
+Jordan,1340,Confirmed,JOR
+Central African Republic,1315,Confirmed,CAF
+Malta,1207,Confirmed,MLT
+Madagascar,1164,Confirmed,MDG
+San Marino,1128,Confirmed,SMR
+South Sudan,1010,Confirmed,SSD
+Jamaica,969,Confirmed,JAM
+Mauritania,888,Confirmed,MRT
+Taiwan*,878,Confirmed,NA
+West Bank and Gaza,844,Confirmed,NA
+Congo (Brazzaville),810,Confirmed,NA
+Cabo Verde,746,Confirmed,NA
+Togo,717,Confirmed,TGO
+Tanzania,713,Confirmed,NA
+Rwanda,692,Confirmed,RWA
+Mauritius,667,Confirmed,MUS
+Montenegro,648,Confirmed,MNE
+Vietnam,630,Confirmed,VNM
+Uganda,604,Confirmed,UGA
+Yemen,573,Confirmed,YEM
+Sao Tome and Principe,565,Confirmed,STP
+Liberia,524,Confirmed,LBR
+Eswatini,504,Confirmed,NA
+Mozambique,468,Confirmed,MOZ
+Malawi,448,Confirmed,MWI
+Benin,415,Confirmed,BEN
+Burma,390,Confirmed,MMR
+Brunei,281,Confirmed,BRN
+Zimbabwe,272,Confirmed,ZWE
+Libya,266,Confirmed,LBY
+Mongolia,251,Confirmed,MNG
+Cambodia,248,Confirmed,KHM
+Guyana,242,Confirmed,GUY
+Trinidad and Tobago,233,Confirmed,TTO
+Monaco,195,Confirmed,MCO
+Comoros,189,Confirmed,COM
+Syria,183,Confirmed,NA
+Barbados,180,Confirmed,BRB
+Bahamas,168,Confirmed,BHS
+Liechtenstein,138,Confirmed,LIE
+Angola,108,Confirmed,AGO
+Burundi,97,Confirmed,BDI
+Suriname,92,Confirmed,SUR
+Eritrea,78,Confirmed,ERI
+Botswana,64,Confirmed,BWA
+Bhutan,56,Confirmed,BTN
+Antigua and Barbuda,49,Confirmed,ATG
+Timor-Leste,48,Confirmed,TLS
+Gambia,47,Confirmed,GMB
+Grenada,41,Confirmed,GRD
+Namibia,41,Confirmed,NAM
+Saint Vincent and the Grenadines,41,Confirmed,VCT
+Laos,37,Confirmed,NA
+Saint Lucia,37,Confirmed,LCA
+Belize,36,Confirmed,BLZ
+Fiji,36,Confirmed,FJI
+Dominica,34,Confirmed,DMA
+Saint Kitts and Nevis,30,Confirmed,KNA
+Seychelles,22,Confirmed,SYC
+Papua New Guinea,16,Confirmed,PNG
+Western Sahara,16,Confirmed,ESH
+Holy See,14,Confirmed,NA
+MS Zaandam,11,Confirmed,NA
+Lesotho,6,Confirmed,LSO

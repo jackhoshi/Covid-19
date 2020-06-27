@@ -1,0 +1,165 @@
+---
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE, 
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%",
+  message=FALSE, 
+  warning=FALSE
+)
+```
+
+Read the data containing daily case number of COVID-19 worldwide
+```{r}
+library(readr)
+library(dplyr)
+library(plotly)
+library(tidyr)
+
+covid19 <- read_csv("dataset/coronavirus.csv")
+head(covid19)
+```
+
+This `coronavirus` dataset has the following fields:
+
+* `date` - The date of the summary
+* `province` - The province or state, when applicable
+* `country` - The country or region name
+* `lat` - Latitude point
+* `long` - Longitude point
+* `type` - the type of case (i.e., confirmed, death)
+* `cases` - the number of daily cases (corresponding to the case type)
+
+
+Plotting the total cases by type worldwide:
+
+``` {r}
+covid19 %>% 
+  group_by(type, date) %>%
+  summarise(total_cases = sum(cases)) %>%
+  pivot_wider(names_from = type, values_from = total_cases) %>%
+  arrange(date) %>%
+  mutate(active = confirmed - death - recovered) %>%
+  mutate(active_total = cumsum(active),
+                recovered_total = cumsum(recovered),
+                death_total = cumsum(death)) %>%
+  plot_ly(x = ~ date,
+                  y = ~ active_total,
+                  name = 'Active', 
+                  fillcolor = 'blue',
+                  type = 'scatter',
+                  mode = 'none', 
+                  stackgroup = 'one') %>%
+  add_trace(y = ~ death_total, 
+             name = "Death",
+             fillcolor = 'red') %>%
+  add_trace(y = ~recovered_total, 
+            name = 'Recovered', 
+            fillcolor = 'green') %>%
+  layout(title = "Distribution of Covid19 Cases Worldwide",
+         legend = list(x = 0.1, y = 0.9),
+         yaxis = list(title = "Number of Cases"),
+         xaxis = list(title = "Source: Johns Hopkins University Center for Systems Science and Engineering"))
+```
+
+plot the confirmed cases distribution by counrty with treemap plot:
+
+``` {r}
+conf_df <- covid19 %>% 
+  filter(type == "confirmed") %>%
+  group_by(country) %>%
+  summarise(total_cases = sum(cases)) %>%
+  arrange(-total_cases) %>%
+  mutate(parents = "Confirmed") %>%
+  ungroup() 
+  
+  plot_ly(data = conf_df,
+          type= "treemap",
+          values = ~total_cases,
+          labels= ~ country,
+          parents=  ~parents,
+          domain = list(column=0),
+          name = "Confirmed",
+          textinfo="label+value+percent parent")
+```
+
+Plot the daily cases from US
+
+``` {r}
+conf_US <- covid19 %>% 
+  filter(type == "confirmed" & country == "US") %>%
+  mutate(cum_cases = cumsum(cases)) %>%
+  ungroup()
+  
+plot_ly(data = conf_US, x = ~date, 
+        y = ~cases, type = "scatter", 
+        mode = "line", name = "US_daily_cases", fillcolor = "blue")
+
+```
+
+Plot the cumulative_cases from US
+
+``` {r}
+plot_ly(data = conf_US, x = ~date, 
+        y = ~cum_cases, type = "scatter", 
+        mode = "line", name = "US_cumulative_cases", fillcolor = "blue") 
+
+```
+
+Plot cumulative cases from California in US
+
+``` {r}
+us_confirmed <- read_csv("dataset/time_series_covid19_confirmed_US.csv")
+
+
+us_confirmed_cum_totay <- us_confirmed %>%
+  select(-c(UID, iso2, iso3, code3, FIPS, Admin2, Country_Region, Lat, Long_, Combined_Key)) %>% 
+  pivot_longer(-Province_State, names_to = "date", values_to = "cases") %>%
+  group_by(Province_State, date) %>%
+  summarise(total_cases = sum(cases)) %>%
+  ungroup() %>%
+  filter(date == max(date)) %>%
+  arrange(-total_cases)
+
+us_confirmed_state <- us_confirmed %>%
+  select(-c(UID, iso2, iso3, code3, FIPS, Admin2, Country_Region, Lat, Long_, Combined_Key)) %>% 
+  pivot_longer(-Province_State, names_to = "date", values_to = "cases") %>%
+  group_by(Province_State, date) %>%
+  summarise(total_cases = sum(cases)) %>%
+  ungroup()
+
+
+us_confirmed_CA <- us_confirmed_state %>%
+  filter(Province_State == "California") 
+
+
+us_confirmed_CA$date = format(as.Date(us_confirmed_CA$date, "%m/%d/%y"), "%m/%d")
+
+us_confirmed_CA <- us_confirmed_CA %>%
+  arrange(date)
+plot_ly(data = us_confirmed_CA, x = ~date, y = ~total_cases, type = "scatter", mode = "line")
+
+
+```
+
+Plot daily cases from California in US
+
+``` {r}
+daily_mat <- matrix(0, dim(us_confirmed_CA)[1], 1)
+colnames(daily_mat) <- 'CA_daily'
+
+new <- cbind(us_confirmed_CA, daily_mat)
+
+for (i in 2:dim(new)[1]){
+  new[i,4] <- new[i,3] - new[i-1,3]
+}
+
+plot_ly(data = new, x = ~date, 
+        y = ~CA_daily, type = "scatter", 
+        mode = "line", name = "CA_daily", 
+        fillcolor = "blue")
+```
